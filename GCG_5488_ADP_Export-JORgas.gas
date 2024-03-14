@@ -1,0 +1,368 @@
+Program.Sub.ScreenSU.Start
+
+Gui.SS_Form1..Create
+Gui.SS_Form1..Caption("ADP Payroll Export")
+Gui.SS_Form1..Size(2665,3210)
+Gui.SS_Form1..Position(0,0)
+Gui.SS_Form1..AlwaysOnTop(False)
+Gui.SS_Form1..FontName("Arial")
+Gui.SS_Form1..FontSize(8)
+Gui.SS_Form1..ForeColor(0)
+Gui.SS_Form1..Backcolor(-2147483633)
+Gui.SS_Form1..ControlBox(True)
+Gui.SS_Form1..MaxButton(False)
+Gui.SS_Form1..MinButton(False)
+Gui.SS_Form1..MousePointer(0)
+Gui.SS_Form1..Moveable(True)
+Gui.SS_Form1..Sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..TitleBar(True)
+
+Gui.SS_Form1..Event(unload, ss_form1_unload)
+
+Gui.SS_Form1.lbl_txtCCC.Create(label)
+Gui.SS_Form1.lbl_txtCCC.Caption("Company Code")
+Gui.SS_Form1.lbl_txtCCC.Visible(True)
+Gui.SS_Form1.lbl_txtCCC.Size(1800,200)
+Gui.SS_Form1.lbl_txtCCC.Zorder(1)
+Gui.SS_Form1.lbl_txtCCC.Position(100,135)
+Gui.SS_Form1.lbl_txtCCC.Enabled(True)
+Gui.SS_Form1.lbl_txtCCC.Alignment(0)
+Gui.SS_Form1.lbl_txtCCC.FontName("Arial")
+Gui.SS_Form1.lbl_txtCCC.FontSize(8)
+Gui.SS_Form1.lbl_txtCCC.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtCCC.BackStyle(0)
+Gui.SS_Form1.lbl_txtCCC.Tooltip("")
+Gui.SS_Form1.lbl_txtCCC.ControlGroup(0)
+Gui.SS_Form1.lbl_txtCCC.DefaultValue("")
+
+
+Gui.SS_Form1.txtCCC.Create(textbox)
+Gui.SS_Form1.txtCCC.Text("")
+Gui.SS_Form1.txtCCC.Visible(True)
+Gui.SS_Form1.txtCCC.Size(1800,330)
+Gui.SS_Form1.txtCCC.Zorder(1)
+Gui.SS_Form1.txtCCC.Position(100,335)
+Gui.SS_Form1.txtCCC.Enabled(True)
+Gui.SS_Form1.txtCCC.Alignment(0)
+Gui.SS_Form1.txtCCC.FontName("Arial")
+Gui.SS_Form1.txtCCC.FontSize(8)
+Gui.SS_Form1.txtCCC.Backcolor(16777215)
+Gui.SS_Form1.txtCCC.BorderStyle(1)
+Gui.SS_Form1.txtCCC.TabStop(True)
+Gui.SS_Form1.txtCCC.TabIndex(1)
+Gui.SS_Form1.txtCCC.Tooltip("")
+Gui.SS_Form1.txtCCC.ControlGroup(0)
+Gui.SS_Form1.txtCCC.DefaultValue("")
+
+
+Gui.SS_Form1.lbl_txtBBB.Create(label)
+Gui.SS_Form1.lbl_txtBBB.Caption("Batch ID")
+Gui.SS_Form1.lbl_txtBBB.Visible(True)
+Gui.SS_Form1.lbl_txtBBB.Size(1800,200)
+Gui.SS_Form1.lbl_txtBBB.Zorder(1)
+Gui.SS_Form1.lbl_txtBBB.Position(100,835)
+Gui.SS_Form1.lbl_txtBBB.Enabled(True)
+Gui.SS_Form1.lbl_txtBBB.Alignment(0)
+Gui.SS_Form1.lbl_txtBBB.FontName("Arial")
+Gui.SS_Form1.lbl_txtBBB.FontSize(8)
+Gui.SS_Form1.lbl_txtBBB.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtBBB.BackStyle(0)
+Gui.SS_Form1.lbl_txtBBB.Tooltip("")
+Gui.SS_Form1.lbl_txtBBB.ControlGroup(0)
+Gui.SS_Form1.lbl_txtBBB.DefaultValue("")
+
+
+Gui.SS_Form1.txtBBB.Create(textbox)
+Gui.SS_Form1.txtBBB.Text("")
+Gui.SS_Form1.txtBBB.Visible(True)
+Gui.SS_Form1.txtBBB.Size(1800,330)
+Gui.SS_Form1.txtBBB.Zorder(1)
+Gui.SS_Form1.txtBBB.Position(100,1035)
+Gui.SS_Form1.txtBBB.Enabled(True)
+Gui.SS_Form1.txtBBB.Alignment(0)
+Gui.SS_Form1.txtBBB.FontName("Arial")
+Gui.SS_Form1.txtBBB.FontSize(8)
+Gui.SS_Form1.txtBBB.Backcolor(16777215)
+Gui.SS_Form1.txtBBB.BorderStyle(1)
+Gui.SS_Form1.txtBBB.TabStop(True)
+Gui.SS_Form1.txtBBB.TabIndex(2)
+Gui.SS_Form1.txtBBB.Tooltip("")
+Gui.SS_Form1.txtBBB.ControlGroup(0)
+Gui.SS_Form1.txtBBB.DefaultValue("")
+
+
+Gui.SS_Form1.cmdOk.Create(button)
+Gui.SS_Form1.cmdOk.Caption("Ok")
+Gui.SS_Form1.cmdOk.Visible(True)
+Gui.SS_Form1.cmdOk.Size(1000,360)
+Gui.SS_Form1.cmdOk.Zorder(0)
+Gui.SS_Form1.cmdOk.Position(100,2235)
+Gui.SS_Form1.cmdOk.Enabled(True)
+Gui.SS_Form1.cmdOk.FontName("Arial")
+Gui.SS_Form1.cmdOk.FontSize(8)
+Gui.SS_Form1.cmdOk.TabStop(True)
+Gui.SS_Form1.cmdOk.TabIndex(5)
+Gui.SS_Form1.cmdOk.Tooltip("")
+Gui.SS_Form1.cmdOk.ControlGroup(0)
+Gui.SS_Form1.cmdOk.DefaultValue("")
+
+Gui.SS_Form1.cmdOk.Event(click, cmdok_click)
+
+Gui.SS_Form1.lbl_txtFile.Create(label)
+Gui.SS_Form1.lbl_txtFile.Caption("File Name")
+Gui.SS_Form1.lbl_txtFile.Visible(True)
+Gui.SS_Form1.lbl_txtFile.Size(1800,200)
+Gui.SS_Form1.lbl_txtFile.Zorder(1)
+Gui.SS_Form1.lbl_txtFile.Position(100,1535)
+Gui.SS_Form1.lbl_txtFile.Enabled(True)
+Gui.SS_Form1.lbl_txtFile.Alignment(0)
+Gui.SS_Form1.lbl_txtFile.FontName("Arial")
+Gui.SS_Form1.lbl_txtFile.FontSize(8)
+Gui.SS_Form1.lbl_txtFile.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txtFile.BackStyle(0)
+Gui.SS_Form1.lbl_txtFile.Tooltip("")
+Gui.SS_Form1.lbl_txtFile.ControlGroup(0)
+Gui.SS_Form1.lbl_txtFile.DefaultValue("")
+
+
+Gui.SS_Form1.txtFile.Create(textbox)
+Gui.SS_Form1.txtFile.Text("")
+Gui.SS_Form1.txtFile.Visible(True)
+Gui.SS_Form1.txtFile.Size(1800,330)
+Gui.SS_Form1.txtFile.Zorder(1)
+Gui.SS_Form1.txtFile.Position(100,1735)
+Gui.SS_Form1.txtFile.Enabled(True)
+Gui.SS_Form1.txtFile.Alignment(0)
+Gui.SS_Form1.txtFile.FontName("Arial")
+Gui.SS_Form1.txtFile.FontSize(8)
+Gui.SS_Form1.txtFile.Backcolor(16777215)
+Gui.SS_Form1.txtFile.BorderStyle(1)
+Gui.SS_Form1.txtFile.TabStop(True)
+Gui.SS_Form1.txtFile.TabIndex(3)
+Gui.SS_Form1.txtFile.Tooltip("")
+Gui.SS_Form1.txtFile.ControlGroup(0)
+Gui.SS_Form1.txtFile.DefaultValue("")
+
+
+Gui.SS_Form1.cmd_txtFile.Create(button)
+Gui.SS_Form1.cmd_txtFile.Caption("^")
+Gui.SS_Form1.cmd_txtFile.Visible(True)
+Gui.SS_Form1.cmd_txtFile.Size(330,330)
+Gui.SS_Form1.cmd_txtFile.Zorder(0)
+Gui.SS_Form1.cmd_txtFile.Position(1985,1735)
+Gui.SS_Form1.cmd_txtFile.Enabled(True)
+Gui.SS_Form1.cmd_txtFile.FontName("Arial")
+Gui.SS_Form1.cmd_txtFile.FontSize(8)
+Gui.SS_Form1.cmd_txtFile.TabStop(True)
+Gui.SS_Form1.cmd_txtFile.TabIndex(4)
+Gui.SS_Form1.cmd_txtFile.Tooltip("")
+Gui.SS_Form1.cmd_txtFile.ControlGroup(0)
+Gui.SS_Form1.cmd_txtFile.DefaultValue("")
+
+Gui.SS_Form1.cmd_txtFile.Event(click,cmd_txtFile_Click)
+
+gui.SS_Form1.lbl_txtCCC.LabelStretch(True)
+gui.SS_Form1.lbl_txtBBB.LabelStretch(True)
+gui.SS_Form1.lbl_txtFile.LabelStretch(True)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.uPyrl.Define("CoCode",String)
+Variable.UDT.uPyrl.Define("BatchID",String)
+Variable.UDT.uPyrl.Define("Employee",String,Employee)
+Variable.UDT.uPyrl.Define("TempRate",String)
+Variable.UDT.uPyrl.Define("TempDept",String)
+Variable.UDT.uPyrl.Define("RT",String)
+Variable.UDT.uPyrl.Define("OT",String)
+Variable.UDT.uPyrl.Define("Type",String,Type)
+Variable.UDT.uPyrl.Define("EC",String,EC)
+Variable.UDT.uPyrl.Define("ECHours",String)
+Variable.UDT.uPyrl.Define("Descr",String,Descr)
+Variable.UDT.uPyrl.Define("Hours",Float,Hours)
+Variable.uGlobal.uPyrl.Declare("uPyrl")
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+f.ODBC.Connection!Con.OpenConnection(v.Ambient.PDSN,v.Ambient.PUser,v.Ambient.PPass)
+gui.SS_Form1.txtCCC.SetFocus
+gui.SS_Form1..Show
+
+Program.Sub.Main.End
+
+Program.Sub.cmdOk_Click.Start
+v.Local.sMsg.Declare(String)
+
+gui.SS_Form1..Visible(false)
+'f.Intrinsic.String.Build("Writing {0}\EPI{1}{2}.csv file",v.Caller.FilesDir,v.Screen.SS_Form1!txtCCC.Text,v.Screen.SS_Form1!txtBBB.Text,v.Local.smsg)
+F.Intrinsic.String.Build("Writing {0} file",V.Screen.SS_Form1!txtFile.Text,V.Local.smsg)
+f.Intrinsic.UI.InvokeWaitDialog(v.Local.sMsg,"ADP Payroll Export")
+
+f.Intrinsic.Control.CallSub(collectdata)
+f.Intrinsic.Control.CallSub(writefile)
+f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.CallSub(ss_form1_unload)
+
+Program.Sub.cmdOk_Click.End
+
+Program.Sub.SS_Form1_Unload.Start
+
+f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.End
+
+Program.Sub.SS_Form1_Unload.End
+
+Program.Sub.collectData.Start
+
+
+v.Local.sEmployee.Declare(String)
+v.Local.sHOLEC.Declare(string)
+v.Local.sSel.Declare(string)
+v.Local.sRet.Declare(String)
+v.Local.sRunTime.Declare(string)
+v.Local.sRunDate.Declare(String)
+v.Local.iForEmpl.Declare(long)
+v.Local.fHours.Declare(float)
+v.Local.sHours.Declare(String)
+
+f.Intrinsic.String.Mid(v.Passed.888888,9,6,v.Local.sRunTime)
+f.Intrinsic.String.Left(v.Passed.888888,8,v.Local.sRunDate)
+
+' look for all records for the selected pay period
+v.uGlobal.uPyrl.Redim(-1,-1)
+f.Intrinsic.String.Build("select Employee, Type, EC, Descr, Hours from Pyrl_Labor_Xfer where Run_Cymd = '{0}' and Run_Time = '{1}' order by Employee",v.Local.sRunDate,v.Local.sRunTime,v.Local.sSel)
+f.ODBC.Connection!Con.OpenRecordsetRO("rstSel",v.Local.sSel)
+	f.Intrinsic.Variable.LoadUDTFromRecordset("Con","rstSel","v.uGlobal.uPyrl",false,1000)
+f.ODBC.Con!rstSel.Close
+
+' if no records are found, exit
+f.Intrinsic.Control.If(v.uGlobal.uPyrl!EC.UBound,=,-1)
+	f.Intrinsic.Control.CallSub(ss_form1_unload)
+f.Intrinsic.Control.EndIf
+
+' find Holiday Code
+f.ODBC.Connection!Con.ExecuteAndReturn("select PAY_Category from PAYROLL_PAY_CATS where PAY_TYPE = '1'",v.Local.sHOLEC)
+F.Intrinsic.String.LPad(V.Local.sHOLEC,"0",2,V.Local.sHOLEC)
+
+' get list of distinct employee ids
+f.Intrinsic.Variable.UDTToString(v.uGlobal.uPyrl,"Employee","*!*","",v.Local.sEmployee)
+f.Intrinsic.String.Split(v.Local.sEmployee,"*!*",v.Local.sEmployee)
+f.Intrinsic.String.RemoveArrayDuplicates(v.Local.sEmployee,v.Local.sEmployee)
+
+
+' add details for each employee
+f.Intrinsic.Control.For(v.Local.iForEmpl,v.Local.sEmployee.LBound,v.Local.sEmployee.UBound,1)
+	' RT Hours
+	f.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!Type,"RT",v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"")
+		f.Intrinsic.String.Format(v.uGlobal.uPyrl(v.Local.sRet.Long)!Hours,"0.00",v.Local.sHours)
+		f.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!RT,v.Local.sHours)
+	f.Intrinsic.Control.EndIf
+
+	' OT Hours
+	f.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!Type,"OT",v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"")
+		f.Intrinsic.String.Format(v.uGlobal.uPyrl(v.Local.sRet.Long)!Hours,"0.00",v.Local.sHours)
+		f.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!OT,v.Local.sHours)
+	f.Intrinsic.Control.EndIf
+
+	' EC Hours
+	f.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!EC,v.Local.sHOLEC,v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"")	
+		f.Intrinsic.String.Format(v.uGlobal.uPyrl(v.Local.sRet.Long)!Hours,"0.00",v.Local.sHours)
+		f.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!ECHours,v.Local.sHours)
+		f.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!EC,"HOL")
+	f.Intrinsic.Control.EndIf
+	
+'	' EC Hours - Holiday could be Type = 'HT'
+	f.Intrinsic.Variable.UDTMultiSeek(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!Type,"HT",v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.sRet.Trim,<>,"")	
+		f.Intrinsic.String.Format(v.uGlobal.uPyrl(v.Local.sRet.Long)!Hours,"0.00",v.Local.sHours)
+		f.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!ECHours,v.Local.sHours)
+		f.Intrinsic.Variable.UDTMultiSeekSet(v.uGlobal.uPyrl!Employee,v.Local.sEmployee(v.Local.iForEmpl),v.uGlobal.uPyrl!EC,"HOL")
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iForEmpl)
+
+' set default values
+' company code
+f.Intrinsic.Variable.UDTSetMemberValue(v.uGlobal.uPyrl!CoCode,v.Screen.SS_Form1!txtCCC.Text)
+
+' batch id
+f.Intrinsic.Variable.UDTSetMemberValue(v.uGlobal.uPyrl!BatchID,v.Screen.SS_Form1!txtBBB.Text)
+
+Program.Sub.collectData.End
+
+Program.Sub.writeFile.Start
+
+v.Local.sFileText.Declare(String,"Co Code,Batch ID,File #,Reg Hours,O/T Hours,Hours 3 Code,Hours 3 Amount")
+v.Local.sFileName.Declare(String)
+v.Local.iFor.Declare(long)
+v.Local.sHold.Declare(String)
+v.Local.sText.Declare(String)
+v.Local.sElements.Declare(string,"CoCode*!*BatchID*!*Employee*!*RT*!*OT*!*EC*!*ECHours")
+
+' get udt data into a string.  remove duplicates and any records without applicable earings
+f.Intrinsic.Variable.UDTMultiFlagDuplicates(v.uGlobal.uPyrl!Employee)
+f.Intrinsic.Variable.UDTMultiFlag(v.uGlobal.uPyrl!RT,"",v.uGlobal.uPyrl!OT,"",v.uGlobal.uPyrl!ECHours,"")
+f.Intrinsic.Variable.UDTDeleteFlagged(v.uGlobal.uPyrl)
+f.Intrinsic.Variable.UDTToString(v.uGlobal.uPyrl,v.Local.sElements,v.Ambient.NewLine,"*!*",v.Local.sHold)
+
+'' create the header record
+'f.Intrinsic.String.Split(v.Local.sFileText,"*!*",v.Local.sFileText)
+'f.Intrinsic.String.JoinCSV(v.Local.sFileText,True,v.Local.sFileText)
+
+
+' create a single line record for each employee as a csv line
+f.Intrinsic.String.Split(v.Local.sHold,v.Ambient.NewLine,v.Local.sHold)
+f.Intrinsic.Control.For(v.Local.iFor,v.Local.sHold.LBound,v.Local.sHold.UBound,1)
+	f.Intrinsic.String.Split(v.Local.sHold(v.Local.iFor),"*!*",v.Local.sText)
+'	f.Intrinsic.String.JoinCSV(v.Local.sText,false,v.Local.sText)
+	F.Intrinsic.String.Join(V.Local.sText,",",V.Local.sText)
+	f.Intrinsic.String.Build("{0}{1}{2}",v.Local.sFileText,v.Ambient.NewLine,v.Local.sText,v.Local.sFileText)
+f.Intrinsic.Control.Next(v.Local.iFor)
+
+' write the text to the file
+'f.Intrinsic.String.Build("{0}\EPI{1}{2}.csv",v.Caller.FilesDir,v.Screen.SS_Form1!txtCCC.Text,v.Screen.SS_Form1!txtBBB.Text,v.Local.sFileName)
+'f.Intrinsic.File.String2File(v.Local.sFileName,v.Local.sFileText)
+F.Intrinsic.File.String2File(V.Screen.SS_Form1!txtFile.Text,V.Local.sFileText)
+
+Program.Sub.writeFile.End
+
+Program.Sub.cmd_txtFile_Click.Start
+
+
+V.Local.sFileName.Declare(String)
+V.Local.bValid.Declare(Boolean)
+
+' make sure somehing was entered
+F.Intrinsic.String.Build("EPI{0}{1}.csv",V.Screen.SS_Form1!txtCCC.Text,V.Screen.SS_Form1!txtBBB.Text,V.Local.sFileName)
+F.Intrinsic.UI.ShowSaveFileDialog(V.Local.sFileName,".csv",V.Local.sFileName)
+F.Intrinsic.Control.If(V.Local.sFileName.Trim,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+gui.SS_Form1.txtFile.Text(v.Local.sFileName)
+
+Program.Sub.cmd_txtFile_Click.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_.ADP_Export-JOR$}$JCT$}$06/13/15 12:55:12 PM
+${$1$}$$}$$}$0$}$15290$}$$}$06/13/15 1:03:01 PM$}$SF> Transactions> Transfer Labor to Payroll
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$For Jormac Aerospace, per quote 6831
+csv file of payroll hours, with a single record line, for each employee with earned hours in a pay period. 
+File layout will be Co. Code, Batch ID, File#, Temp Rate, Temp Dept, Reg Hours, O/T Hours, Hours3 Code, Hours3 Amount, Hours3 Code, Hours3 Amount, ? , Hours3 Code, Hours3 Amount 
+Hours3 Code and Hours3 Amount are any additional earnings for an employee.  For this version, the only Hours3 Code that will be included will be Holiday (Op_Header.Text1 where ID = ?401002? and Sequence = ?0003?).  The Hours3 Code should will be ?HOL?.
+
+Program.Sub.Comments.End
+
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::ADP Payroll Export
+SS_Form1.CTRL{{NAME::txtCCC\\TYPE::2\\CAPTION::Company Code\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtBBB\\TYPE::2\\CAPTION::Batch ID\\TABSTOP::2\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtFile\\TYPE::2\\CAPTION::File Name\\TABSTOP::3\\GROUP::3\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdOk\\TYPE::5\\CAPTION::Ok\\TABSTOP::4\\GROUP::4\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
